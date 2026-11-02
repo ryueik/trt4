@@ -6,7 +6,7 @@ Funciona no computador e no celular, pode ser **instalado como aplicativo** (PWA
 
 ## O que tem
 - **Edital verticalizado** com checklist de tudo o que cai.
-- **63 tópicos** com resumo, **mapa mental interativo**, flashcards e anotações próprias, cobrindo Conhecimentos Gerais e Específicos (DevOps, PDPJ-Br/Java/Spring, contêineres, engenharia de software, web, redes, segurança, LGPD, normativos do CNJ e inglês técnico).
+- **63 tópicos**, cada um com uma **aula completa** (explicação do zero, passo a passo, exemplos resolvidos e “como a FCC cobra”) e um resumo para revisão, **mapa mental interativo**, flashcards e anotações próprias, cobrindo Conhecimentos Gerais e Específicos (DevOps, PDPJ-Br/Java/Spring, contêineres, engenharia de software, web, redes, segurança, LGPD, normativos do CNJ e inglês técnico).
 - **13 diagramas** (Git Flow, CI/CD, OAuth 2.0 + PKCE, RabbitMQ, arquitetura PDPJ-Br, Scrum, pirâmide de testes, Kubernetes, IaaS/PaaS/SaaS, OSI × TCP/IP, CID, criptografia e DMZ).
 - **151 questões inéditas no estilo FCC**, todas com gabarito comentado, filtros, caderno de erros e favoritos.
 - **Simulado cronometrado** com a nota ponderada do edital: (Gerais + 2 × Específicos) ÷ 3.
@@ -35,7 +35,7 @@ sw.js                   service worker (cache offline; aumente VERSION ao public
 manifest.webmanifest    instalação como app
 assets/css/style.css    visual, tema claro/escuro, responsivo
 assets/js/              app.js (telas), store.js (progresso), markdown.js, mindmap.js
-assets/data/            syllabus.js (edital), topics-*.js (resumos), questions-*.js (questões), redacoes.js
+assets/data/            syllabus.js (edital), topics-*.js (resumos), aulas-*.js (aulas completas), questions-*.js (questões), redacoes.js
 assets/img/             diagramas SVG
 ```
 Para adicionar uma questão, inclua um objeto em `assets/data/questions-*.js` no formato `{ topic, q, o: [5 alternativas], a: índice correto, e: comentário }`. As alternativas são embaralhadas de forma fixa por questão.

@@ -298,3 +298,10 @@ details.box > div { padding: 0 16px 14px; }
 .dg .dg-line, .dg .dg-brace { fill: none; stroke: var(--muted); stroke-width: 1.6; }
 .dg .dg-lane { fill: none; stroke: var(--border); stroke-width: 2; }
 .dg .dg-head { fill: var(--muted); }
+
+/* ---------- aula do professor ---------- */
+.aula-nav { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 14px; }
+.aula-nav a { font-size: .85rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 999px; background: var(--primary-soft); color: var(--primary); border: 1px solid var(--border); }
+.eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); margin: 26px 0 6px; scroll-margin-top: 80px; }
+.aula { scroll-margin-top: 80px; border-bottom: 2px dashed var(--border); padding-bottom: 18px; margin-bottom: 8px; }
+.aula h2 { border-left: 4px solid var(--accent); padding-left: 10px; }
