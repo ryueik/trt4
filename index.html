@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TRT4 TI — Estudos</title>
+  <meta name="description" content="Plataforma de estudos para o concurso TRT4 – Técnico Judiciário – Tecnologia da Informação (FCC): resumos, mapas mentais, questões, flashcards e redação.">
+  <meta name="theme-color" content="#1e3a8a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    try {
+      var t = JSON.parse(localStorage.getItem('trt4:v1') || '{}').theme;
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <header class="topbar">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <a href="#/" class="brand" aria-label="Início">
+      <img src="assets/icons/icon.svg" alt="" width="28" height="28">
+      <span><strong>TRT4</strong> TI <small>FCC</small></span>
+    </a>
+    <form class="search" id="searchForm" role="search">
+      <input type="search" id="searchInput" placeholder="Buscar assunto, lei, conceito…" aria-label="Buscar" autocomplete="off">
+      <div class="search-results" id="searchResults" hidden></div>
+    </form>
+    <span class="net" id="netStatus" title="Status da conexão"></span>
+    <button class="icon-btn" id="themeBtn" aria-label="Alternar tema claro/escuro">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/></svg>
+    </button>
+  </header>
+
+  <nav class="sidebar" id="sidebar" aria-label="Navegação principal">
+    <ul>
+      <li><a href="#/" data-nav="inicio"><span class="ni">🏠</span>Painel</a></li>
+      <li><a href="#/edital" data-nav="edital"><span class="ni">✅</span>Edital verticalizado</a></li>
+      <li><a href="#/disciplinas" data-nav="disciplinas"><span class="ni">📚</span>Resumos e mapas</a></li>
+      <li><a href="#/questoes" data-nav="questoes"><span class="ni">📝</span>Questões</a></li>
+      <li><a href="#/simulado" data-nav="simulado"><span class="ni">⏱️</span>Simulado</a></li>
+      <li><a href="#/flashcards" data-nav="flashcards"><span class="ni">🃏</span>Flashcards</a></li>
+      <li><a href="#/redacao" data-nav="redacao"><span class="ni">✍️</span>Redação</a></li>
+      <li><a href="#/erros" data-nav="erros"><span class="ni">🎯</span>Caderno de erros</a></li>
+      <li><a href="#/plano" data-nav="plano"><span class="ni">🗓️</span>Plano e cronograma</a></li>
+      <li><a href="#/config" data-nav="config"><span class="ni">⚙️</span>Progresso e backup</a></li>
+    </ul>
+    <div class="sidebar-foot">
+      <div class="countdown" id="sideCountdown"></div>
+      <button class="btn small ghost" id="installBtn" hidden>📲 Instalar app</button>
+    </div>
+  </nav>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <main id="main" tabindex="-1"></main>
+
+  <nav class="bottombar" aria-label="Atalhos">
+    <a href="#/" data-nav="inicio"><span>🏠</span>Painel</a>
+    <a href="#/disciplinas" data-nav="disciplinas"><span>📚</span>Estudar</a>
+    <a href="#/questoes" data-nav="questoes"><span>📝</span>Questões</a>
+    <a href="#/flashcards" data-nav="flashcards"><span>🃏</span>Cards</a>
+    <a href="#/redacao" data-nav="redacao"><span>✍️</span>Redação</a>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/markdown.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/data/syllabus.js"></script>
+  <script src="assets/data/topics-gerais.js"></script>
+  <script src="assets/data/topics-dev.js"></script>
+  <script src="assets/data/topics-infra.js"></script>
+  <script src="assets/data/topics-seg.js"></script>
+  <script src="assets/data/questions-gerais.js"></script>
+  <script src="assets/data/questions-dev.js"></script>
+  <script src="assets/data/questions-infra.js"></script>
+  <script src="assets/data/questions-seg.js"></script>
+  <script src="assets/data/redacoes.js"></script>
+  <script src="assets/js/mindmap.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
