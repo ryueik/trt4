@@ -196,3 +196,9 @@ window.Q = function (disc, list) {
     DATA.questions.push(q);
   });
 };
+
+/* aula completa (explicação didática) de um tópico — arquivos aulas-*.js */
+window.A = function (id, md) {
+  if (!DATA.topics[id]) { console.warn('Aula para tópico inexistente:', id); return; }
+  DATA.topics[id].aula = md;
+};

@@ -288,9 +288,13 @@
     function show(tb) {
       $$('.tabs button').forEach(function (b) { b.classList.toggle('active', b.dataset.tab === tb); });
       if (tb === 'resumo') {
-        body.innerHTML = '<div class="prose">' + MD.render(t.summary) + diagramsHtml(t.diagrams) + '</div>' +
+        body.innerHTML = (t.aula ? '<div class="aula-nav"><a href="#aula-top" data-jump="aula-top">👨‍🏫 Aula completa</a><a href="#resumo-top" data-jump="resumo-top">📌 Resumo para revisão</a></div>' +
+          '<section class="prose aula" id="aula-top"><p class="eyebrow">👨‍🏫 Aula completa — leia com calma na primeira vez</p>' + MD.render(t.aula) + '</section>' +
+          '<p class="eyebrow" id="resumo-top">📌 Resumo para revisão rápida — use nas revisões e na véspera</p>' : '') +
+          '<div class="prose">' + MD.render(t.summary) + diagramsHtml(t.diagrams) + '</div>' +
           (st === 0 ? '<div class="callout ok">Terminou a leitura? <button class="btn small ok" id="markDone">Marcar como estudado</button></div>' : '');
         loadDiagrams(body);
+        $$('[data-jump]', body).forEach(function (a) { a.onclick = function (ev) { ev.preventDefault(); var el = document.getElementById(a.dataset.jump); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }; });
         var md = $('#markDone'); if (md) md.onclick = function () { S.setTopic(id, 1); $('#stSel').value = 1; md.parentNode.remove(); toast('Tópico marcado como estudado ✔'); };
       } else if (tb === 'mapa') {
         body.innerHTML = '<div class="mm" id="mm"></div>';
@@ -736,7 +740,7 @@
   var index = [];
   Object.keys(DATA.topics).forEach(function (id) {
     var t = DATA.topics[id];
-    index.push({ href: '#/topico/' + id, title: t.title, sub: (discById[t.disc] || {}).name, text: norm(t.title + ' ' + (t.summary || '').replace(/<[^>]+>/g, ' ') + ' ' + (t.mindmap || '')) , tt: norm(t.title) });
+    index.push({ href: '#/topico/' + id, title: t.title, sub: (discById[t.disc] || {}).name, text: norm(t.title + ' ' + (t.aula || '') + ' ' + (t.summary || '').replace(/<[^>]+>/g, ' ') + ' ' + (t.mindmap || '')) , tt: norm(t.title) });
   });
   DATA.essays.forEach(function (e) { index.push({ href: '#/redacao-modelo/' + e.id, title: 'Redação: ' + e.tema, sub: 'Redação-modelo', text: norm(e.tema + ' ' + e.paragraphs.join(' ')), tt: norm(e.tema) }); });
   var sIn = $('#searchInput'), sOut = $('#searchResults');

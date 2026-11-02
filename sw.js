@@ -2,7 +2,7 @@
    Pré-carrega todo o site para uso offline (resumos, mapas, questões, redação, diagramas).
    Estratégia: cache primeiro + atualização em segundo plano (stale-while-revalidate).
    Ao publicar conteúdo novo, aumente VERSION. */
-const VERSION = 'trt4-v1.0.1';
+const VERSION = 'trt4-v1.1.0';
 const ASSETS = [
   'index.html',
   'manifest.webmanifest',
@@ -18,6 +18,10 @@ const ASSETS = [
   'assets/data/topics-gerais.js',
   'assets/data/topics-infra.js',
   'assets/data/topics-seg.js',
+  'assets/data/aulas-gerais.js',
+  'assets/data/aulas-dev.js',
+  'assets/data/aulas-infra.js',
+  'assets/data/aulas-seg.js',
   'assets/icons/icon-192.png',
   'assets/icons/icon-512.png',
   'assets/icons/icon.svg',
