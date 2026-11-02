@@ -1,0 +1,19 @@
+{
+  "name": "TRT4 TI — Plataforma de Estudos",
+  "short_name": "TRT4 TI",
+  "description": "Resumos, mapas mentais, questões FCC, flashcards e redação para o concurso TRT4 – Técnico Judiciário – TI.",
+  "lang": "pt-BR",
+  "start_url": "./index.html#/",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1220",
+  "theme_color": "#1e3a8a",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
